@@ -1,6 +1,8 @@
 echo "--------------- CREATING/SETUP DATABASE"
 
 mongo --eval "use saude-em-casa"
+mongo --eval "db.dropDatabase()"
+mongo --eval "use saude-em-casa"
 mongo --eval "db.createCollection('habilitados')"
 mongo --eval "db.createCollection('farmacia_popular_conveniada')"
 mongo --eval "db.createCollection('farmacia_popular')"
